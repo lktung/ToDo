@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:backgroundTintMode="add"
+    app:layout_constraintCircleRadius="10dp"
+    android:background="@drawable/rounded_dialog">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <EditText
+            android:id="@+id/title_content_bottomSheet"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/input_field"
+            android:layout_margin="20dp"
+            android:hint="Title"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/content_bottomSheet"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@id/title_content_bottomSheet"
+            android:inputType="textMultiLine"
+            android:lines="8"
+            android:maxLines="10"
+            android:minLines="6"
+            android:scrollbars="vertical"
+            android:background="@drawable/input_field"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="Content"
+            android:textSize="18sp"
+            android:padding="10dp"/>
+        <Button
+            android:id="@+id/Done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Done"
+            android:textSize="18sp"
+            android:layout_below="@id/content_bottomSheet"
+            android:layout_margin="20dp"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+</FrameLayout>

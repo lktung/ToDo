@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".EditActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_edt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#33FFFF"
+        app:navigationIcon="@drawable/ic_close"
+        app:menu="@menu/toolbar_editaitem"
+        app:title="ToDo"
+        android:foregroundGravity="center"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar_edt"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <EditText
+                android:id="@+id/title_content_edt"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/input_field_edittodo"
+                android:layout_margin="20dp"
+                android:hint="Title"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:enabled="false"
+                android:layout_above="@id/content_edt" />
+            <EditText
+                android:id="@+id/content_edt"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:inputType="textMultiLine"
+                android:lines="8"
+                android:maxLines="10"
+                android:minLines="6"
+                android:scrollbars="vertical"
+                android:background="@drawable/input_field_edittodo"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textSize="18sp"
+                android:padding="10dp"
+                android:layout_centerVertical="true"/>
+
+            <CheckBox
+                android:id="@+id/cb_iscomplete_edt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Is Complete"
+                android:layout_below="@id/content_edt"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:textSize="18sp"/>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>
